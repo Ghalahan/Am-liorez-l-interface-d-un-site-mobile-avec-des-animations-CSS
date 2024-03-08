@@ -108,7 +108,20 @@ body {
 }
 
 .fa-solid {
-    margin-right: 20px;
+    margin-right: 25px;
+    color: black;
+}
+
+.fa-arrow-left {
+    color: black;
+}
+
+.fa-utensils{
+    color: white;
+}
+
+.fa-handshake-angle{
+    color: white;
 }
 
 
@@ -150,7 +163,7 @@ body {
 
 a {
  text-decoration: none;
- color: black;
+ color: white;
 }
 
 footer {
@@ -197,12 +210,10 @@ footer {
 }
 
 .arrow{
-    padding: 20px;
+    padding: 15px;
     position: absolute;
-}
-
-.fa-arrow-left{
-    width: 100px;
+    margin-left: 10px;
+    font-size: x-large;
 }
 
 .img_rest{
@@ -229,18 +240,19 @@ footer {
     align-items: center;
 }
 
-.entree_rest1{
-    padding-left: 15px;
+.plats{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     background-color: #FFFFFF;
     border-radius: 20px;
-    box-shadow: 0px 0px 18px 5px rgb(0,0,0,0.2);
+    height: 50px;
+    padding: 15px;
+    box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.1);
     
 }
 
-.entree_rest1_subtitle{
+.plats_subtitle{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -248,6 +260,7 @@ footer {
 
 .prix{
     padding-right: 15px;
+    font-weight: bolder;
 }
 
 .commande{
@@ -274,3 +287,22 @@ footer {
 
     margin: 0;
 }
+  
+h1{
+    font-family: 'Shrikhand', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sections_rest{
+    margin: 0px;
+    font-weight: unset;
+    text-decoration: underline #99E2D0;
+    text-underline-offset: 8px;
+    margin-top: 30px;
+}
+
+h4{
+    font-weight: unset;
+}
+
