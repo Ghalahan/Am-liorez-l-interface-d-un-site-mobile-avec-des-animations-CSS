@@ -40,7 +40,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: rgb(232, 220, 220);
+    background-color: #F6F6F6;
 }
 
 .slogan {
@@ -64,6 +64,12 @@ body {
     border-color: lightgrey;
     align-items: center;
     justify-content: center;
+    transition-property: transform;
+    transition-duration: 400ms;
+}
+
+.button_restaurants:hover{
+            transform: scale(1.15);
 }
 
 .fonctionnement {
@@ -128,7 +134,7 @@ body {
 .restaurants {
     padding-top: 30px;
     padding-bottom: 70px;
-    background-color: rgb(232, 220, 220);
+    background-color: #F6F6F6;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -183,13 +189,6 @@ footer {
     filter: invert(1);
 }
 
-.logo-footer{
-
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
 
 .star:hover path{
     /* Modification du coeur au survol. Le contenu est modifié. */
@@ -297,8 +296,6 @@ h1{
 .sections_rest{
     margin: 0px;
     font-weight: unset;
-    text-decoration: underline #99E2D0;
-    text-underline-offset: 8px;
     margin-top: 30px;
 }
 
@@ -306,3 +303,63 @@ h4{
     font-weight: unset;
 }
 
+.underline_sections{
+    width: 60px;
+    background-color: #99E2D0;
+    height: 5px;
+    border: 0px;
+    margin: inherit;
+    margin-top: -10px;
+
+}
+
+
+
+
+/****** Media queries ***********/
+
+/* Large devices (desktop) */
+
+@media (min-width: 1440px) {
+
+.champ-de-selection{
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.slogan {
+    width: fit-content;
+    height: 20px;
+}
+.slogan2{
+    width: fit-content;
+    height: 20px;
+}
+.bloc-etapes {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+.etapes{
+    width: 400px;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-content img{
+
+    order: 2;
+
+}
+
+.logo-ohmyfood-footer {
+    padding-left: 100px;
+}
+}
