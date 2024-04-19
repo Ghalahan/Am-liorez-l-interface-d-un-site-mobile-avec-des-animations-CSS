@@ -6,6 +6,46 @@ body {
     margin: 0px;
 }
 
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation-name: display;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    animation-duration: 1s;
+    opacity: 1;
+    
+}
+
+@keyframes display {
+    to {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-animation {
+    
+    to{
+        transform: scale(1.1);
+    }
+  }
+
+.loader img {
+    filter: invert(1);
+    animation: pulse-animation 1s infinite;
+    animation-direction: alternate;
+
+}
+
 .logo-header {
     padding: 10px;
     display: flex;
@@ -59,17 +99,34 @@ body {
     width: 218px;
     height: 50px;
     border-radius: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background: linear-gradient( #FF79DA,#9356DC);
-    border-color: lightgrey;
     align-items: center;
     justify-content: center;
-    transition-property: transform;
-    transition-duration: 400ms;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(rgba(255,255,255,0),#9356DC);
+    background-color: #FF79DA;
+    border-color: lightgrey;
+    
 }
 
+
+
 .button_restaurants:hover{
-            transform: scale(1.15);
+    background: linear-gradient(200.64deg, #9356DC -65px, #FF79DA 65%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.5)
+}
+
+.animation-button{
+    position: relative;
+
+}
+
+.animation-button:hover .button_restaurants_1{
+    opacity: 0;
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
 }
 
 .fonctionnement {
@@ -140,12 +197,21 @@ body {
 
 }
 
+.new{
+    padding: 10px;
+    background-color: rgb(115, 190, 142);
+    position: absolute;
+    right: 10px;
+    color: green;
+}
+
 .restaurant-cards {
     border-radius: 20px;
     display: flex;
     margin-top: 30px;
     flex-direction: column;
     background-color: white;
+    position: relative;
 }
 
 
@@ -155,7 +221,7 @@ body {
 
 .restaurant-cards img {
     width: 100%;
-    height: 136px;
+    height: 250px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
@@ -165,6 +231,7 @@ body {
     padding-left: 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 a {
@@ -189,25 +256,50 @@ footer {
     filter: invert(1);
 }
 
-
-.star:hover path{
-    /* Modification du coeur au survol. Le contenu est modifié. */
-    d: path("M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z");
-    fill: url(#grad1);
+.icone_1{
+    position: relative;
 }
 
-.star{
-    max-width: 22px;
-    height: 21px;
-    padding-right: 20px;
-    fill:#353535 ;
+.animated{
+    height: 30px;
+    font-size: 20px;
+    position: relative;
+    width: 30px; 
+}    
+.animated .fa-heart.fa-solid{
+    color: black;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    left: 0px;
+    transition: 1s all ease;
+    background: linear-gradient(0deg, #9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+    
+    }   
+
+
+
+.animated .fa-heart.fa-regular{
+    font-weight: 400;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    
 }
 
-.star path{
-    fill: #353535;
-    transition:all 1s ease
+
+.nom_rest1 .animated{
+    margin-left: 50px;
+    margin-top: 5px;
 }
 
+.animated:hover .fa-heart.fa-solid{ 
+    opacity: 1;    
+}
 .arrow{
     padding: 15px;
     position: absolute;
@@ -231,36 +323,90 @@ footer {
     flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
+    position: relative;
 }
 
 .nom_rest1{
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.plats{
+.card{           
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
     background-color: #FFFFFF;
     border-radius: 20px;
-    height: 50px;
-    padding: 15px;
-    box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.1);
-    
-}
-
-.plats_subtitle{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.1);
+
+    animation: fadein 2s forwards;
+    -webkit-animation: fadein 2s forwards;
+    visibility: hidden;
+    opacity: 0;
+
 }
 
-.prix{
-    padding-right: 15px;
-    font-weight: bolder;
+@-webkit-keyframes fadein {
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
 }
+
+.card-2{
+animation-delay: 1s;
+}
+
+.card-3{
+    animation-delay: 1.5s;
+}
+
+
+    
+
+.card .txt{        
+    width: 100%;        
+    padding: 20px;        
+    display: flex;        
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card .txt .titre{
+    text-overflow: ellipsis;        
+    overflow: hidden;        
+    white-space: nowrap;        
+    overflow: hidden;    
+}    
+.card .price{
+    position: relative;
+    padding-right: 20px;
+}
+.card .animated{        
+    height: 80px;
+    width: 0%;
+    background: rgb(115, 190, 142);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 2s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;  
+}    
+.card:hover .animated{
+    width: 25%;
+}
+.card:hover .txt{
+    width: calc(90% - 40px);
+}
+
+.card .fa-circle-check{
+    filter: invert(1);
+}
+
 
 .commande{
     display: flex;
@@ -280,7 +426,14 @@ footer {
     border-color: lightgrey;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(rgba(255,255,255,0),#9356DC);
+    background-color: #FF79DA;
+    border-color: lightgrey;
+    
+    transition-property: box-shadow;
+    transition:all 1s ease;
 }
+
 
 .menu_rest1 h3, .menu_rest1 h4, .menu_rest1 .prix{
 
@@ -308,7 +461,7 @@ h4{
     background-color: #99E2D0;
     height: 5px;
     border: 0px;
-    margin: inherit;
+    margin: initial;
     margin-top: -10px;
 
 }
@@ -361,5 +514,55 @@ h4{
 
 .logo-ohmyfood-footer {
     padding-left: 100px;
+}
+
+.test{
+    flex-direction: row;
+}
+
+.restaurant-cards{
+    width: 1000px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.restaurant-cards img{
+    height: 300px;
+}
+
+.restaurants{
+    padding-left: 100px;
+}
+
+.menu_rest1{
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.img_rest{
+    object-fit: cover;
+    height: 350px;
+}
+.img_menu_header{
+    object-fit: cover;
+    object-position: 0px -400px;
+    height: 400px;
+}
+.nom_rest1{
+    justify-content: center;
+    align-items: center;
+}
+.icone_1{
+    padding-left: 20px;
+}
+
+.plats:hover{
+    margin-right:100px;
+}
+
+.card:hover .animated{
+    width: 10%;
 }
 }
