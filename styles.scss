@@ -1,0 +1,579 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    body {
+        margin: 0px;
+    }
+}
+
+
+/* LOADER*/
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation-name: display;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    animation-duration: 1s;
+    opacity: 1;
+    
+    img {
+        filter: invert(1);
+        animation: pulse-animation 1s infinite;
+        animation-direction: alternate;
+    
+    }
+}
+
+
+/* LOADER*/
+
+/*COEURS*/
+.animated .fa-heart.fa-solid{
+    color: black;
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    left: 0px;
+    transition: 1s all ease;
+    background: linear-gradient(0deg, #9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+    
+    }   
+
+
+
+.animated .fa-heart.fa-regular{
+    font-weight: 400;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    
+}
+
+.nom_rest1 .animated{
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.animated:hover .fa-heart.fa-solid{ 
+    opacity: 1;    
+}
+/*COEURS*/
+
+/*SLIDERS*/
+.card .animated{        
+    height: 80px;
+    width: 0%;
+    background: rgb(115, 190, 142);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 2s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;  
+}    
+.card:hover .animated{
+    width: 25%;
+}
+.card:hover .txt{
+    width: calc(90% - 40px);
+}
+/*SLIDERS*/
+
+@keyframes display {
+    to {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-animation {
+    
+    to{
+        transform: scale(1.1);
+    }
+  }
+
+
+
+.logo-header {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-ohmyfood {
+    width: 197px;
+}
+.champ-de-selection {
+    display: flex;
+    background-color: #EAEAEA;
+    justify-content: center;
+    box-shadow: 0px 0px 18px 5px rgb(0,0,0,0.2);
+    position: relative;
+}
+
+.city-input {
+    border: none;
+    background-color: #EAEAEA;
+}
+
+.icone-srch {
+    margin-right: 10px;
+}
+
+.reservation {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+
+.slogan {
+    width: 275px;
+    height: 68px;
+}
+
+.slogan2 {
+    width: 315px;
+    height: 46px;
+}
+
+.button_restaurants{
+    display: flex;
+    color: white;
+    width: 218px;
+    height: 50px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(rgba(255,255,255,0),#9356DC);
+    background-color: #FF79DA;
+    border-color: lightgrey;
+    
+}
+
+
+
+.button_restaurants:hover{
+    background: linear-gradient(200.64deg, #9356DC -65px, #FF79DA 65%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.5)
+}
+
+.animation-button{
+    position: relative;
+
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+}
+
+.fonctionnement {
+    margin: 20px;
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.bloc-etapes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.etapes {
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    width: 335px;
+    height: 72.38px;
+    background-color: rgb(232, 220, 220);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.num {
+    color: white;
+    background-color: #9356DC;
+    display: flex;
+    border-radius: 100%;
+    border: 2px solid #D9D9D9;
+    padding: 10px;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    left: -5px;
+    align-items: center;
+}
+
+.fa-solid {
+    margin-right: 25px;
+    color: black;
+}
+
+.fa-arrow-left {
+    color: black;
+}
+
+.fa-utensils{
+    color: white;
+}
+
+.fa-handshake-angle{
+    color: white;
+}
+
+
+.restaurants {
+    padding-top: 30px;
+    padding-bottom: 70px;
+    background-color: #F6F6F6;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.new{
+    padding: 10px;
+    background-color: rgb(115, 190, 142);
+    position: absolute;
+    right: 10px;
+    color: green;
+}
+
+.restaurant-cards {
+    border-radius: 20px;
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+}
+
+
+.restaurant-cards a {
+    flex: 1;
+}
+
+.restaurant-cards img {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+ text-decoration: none;
+ color: white;
+}
+
+footer {
+    padding: 20px;
+    background-color: #353535;
+    color: white;
+}
+
+.fa-store {
+    color: #9c5bc8;
+}
+
+.logo-ohmyfood-footer{
+
+    height: 27px;
+    width: 139px;
+    filter: invert(1);
+}
+
+.icone_1{
+    position: relative;
+}
+
+.animated{
+    height: 30px;
+    font-size: 20px;
+    position: relative;
+    width: 30px; 
+}    
+
+.arrow{
+    padding: 15px;
+    position: absolute;
+    margin-left: 10px;
+    font-size: x-large;
+}
+
+.img_rest{
+    display: flex;
+    flex-direction: column;
+    height: 275px;
+}
+
+.menu_rest1{
+    gap: 20px;
+    display: flex;
+    position: relative;
+    background-color: #F6F6F6;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.nom_rest1{
+    display: flex;
+    align-items: center;
+}
+
+.card{           
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.1);
+
+    animation: fadein 2s forwards;
+    -webkit-animation: fadein 2s forwards;
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+@-webkit-keyframes fadein {
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.card-2{
+animation-delay: 1s;
+}
+
+.card-3{
+    animation-delay: 1.5s;
+}
+
+
+    
+
+.card .txt{        
+    width: 100%;        
+    padding: 20px;        
+    display: flex;        
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card .txt .titre{
+    text-overflow: ellipsis;        
+    overflow: hidden;        
+    white-space: nowrap;        
+    overflow: hidden;    
+}    
+.card .price{
+    position: relative;
+    padding-right: 20px;
+}
+
+
+.card .fa-circle-check{
+    filter: invert(1);
+}
+
+
+.commande{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.button_commande{
+    display: flex;
+    color: white;
+    width: 186px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient( #FF79DA,#9356DC);
+    border-color: lightgrey;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(255,255,255,0),#9356DC);
+    background-color: #FF79DA;
+    border-color: lightgrey;
+    
+    transition-property: box-shadow;
+    transition:all 1s ease;
+}
+
+
+.menu_rest1 h3, .menu_rest1 h4, .menu_rest1 .prix{
+
+    margin: 0;
+}
+  
+h1{
+    font-family: 'Shrikhand', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sections_rest{
+    margin: 0px;
+    font-weight: unset;
+    margin-top: 30px;
+}
+
+h4{
+    font-weight: unset;
+}
+
+.underline_sections{
+    width: 60px;
+    background-color: #99E2D0;
+    height: 5px;
+    border: 0px;
+    margin: initial;
+    margin-top: -10px;
+
+}
+
+
+
+
+/****** Media queries ***********/
+
+/* Large devices (desktop) */
+
+@media (min-width: 1440px) {
+
+/*CHANGEMENTS*/
+.bloc-etapes {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-around;
+}
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+/*CHANGEMENTS*/
+
+
+.test{
+    flex-direction: row;
+}
+.etapes{
+    width: 400px;
+}
+
+.champ-de-selection{
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.slogan {
+    width: fit-content;
+    height: 20px;
+}
+.slogan2{
+    width: fit-content;
+    height: 20px;
+}
+.footer-content img{
+
+    order: 2;
+
+}
+
+.logo-ohmyfood-footer {
+    padding-left: 100px;
+}
+
+
+
+.restaurant-cards{
+    width: 1000px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.restaurant-cards img{
+    height: 300px;
+}
+
+.restaurants{
+    padding-left: 100px;
+}
+
+.menu_rest1{
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.img_rest{
+    object-fit: cover;
+    height: 350px;
+}
+.img_menu_header{
+    object-fit: cover;
+    object-position: 0px -400px;
+    height: 400px;
+}
+.nom_rest1{
+    justify-content: center;
+    align-items: center;
+}
+.icone_1{
+    padding-left: 20px;
+}
+
+.plats:hover{
+    margin-right:100px;
+}
+
+.card:hover .animated{
+    width: 10%;
+}
+}
