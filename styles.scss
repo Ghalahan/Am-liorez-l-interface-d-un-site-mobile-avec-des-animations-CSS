@@ -36,30 +36,30 @@ html {
 /* LOADER*/
 
 /*COEURS*/
-.animated .fa-heart.fa-solid{
-    color: black;
-    position: absolute;
-    top: 0px;
-    opacity: 0;
-    left: 0px;
-    transition: 1s all ease;
-    background: linear-gradient(0deg, #9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: 2;
-    
-    }   
-
-
-
-.animated .fa-heart.fa-regular{
-    font-weight: 400;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-    
-}
+.animated {
+    .fa-heart {
+      &.fa-solid {
+        color: black;
+        position: absolute;
+        top: 0px;
+        opacity: 0;
+        left: 0px;
+        transition: 1s all ease;
+        background: linear-gradient(0deg, #9356dc, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        z-index: 2;
+      }
+  
+      &.fa-regular {
+        font-weight: 400;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+      }
+    }
+  }
 
 .nom_rest1 .animated{
     margin-left: 50px;
@@ -271,26 +271,25 @@ html {
     flex-direction: column;
     background-color: white;
     position: relative;
-}
 
+    a {
+        flex: 1;
+    }
 
-.restaurant-cards a {
-    flex: 1;
-}
+    img {
+        width: 100%;
+        height: 250px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+    }
 
-.restaurant-cards img {
-    width: 100%;
-    height: 250px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding-left: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .card-content {
+        padding-left: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 a {
@@ -365,31 +364,7 @@ footer {
     align-items: center;
     box-shadow: 0px 5px 1px 1px rgba(0,0,0,0.1);
 
-    animation: fadein 2s forwards;
-    -webkit-animation: fadein 2s forwards;
-    visibility: hidden;
-    opacity: 0;
-
-}
-
-@-webkit-keyframes fadein {
-
-    to {
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
-.card-2{
-animation-delay: 1s;
-}
-
-.card-3{
-    animation-delay: 1.5s;
-}
-
-
-    
+}    
 
 .card .txt{        
     width: 100%;        
@@ -416,30 +391,29 @@ animation-delay: 1s;
 }
 
 
-.commande{
+.commande {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
     padding-bottom: 40px;
-}
 
-.button_commande{
-    display: flex;
-    color: white;
-    width: 186px;
-    height: 50px;
-    border-radius: 50px;
-    background: linear-gradient( #FF79DA,#9356DC);
-    border-color: lightgrey;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(rgba(255,255,255,0),#9356DC);
-    background-color: #FF79DA;
-    border-color: lightgrey;
-    
-    transition-property: box-shadow;
-    transition:all 1s ease;
+    .button_commande {
+        display: flex;
+        color: white;
+        width: 186px;
+        height: 50px;
+        border-radius: 50px;
+        background: linear-gradient(#FF79DA, #9356DC);
+        border-color: lightgrey;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), #9356DC);
+        background-color: #FF79DA;
+        border-color: lightgrey;
+        transition-property: box-shadow;
+        transition: all 1s ease;
+    }
 }
 
 
